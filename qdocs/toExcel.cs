@@ -177,7 +177,7 @@ namespace qdocs
             return "";
         }
 
-        private void DoSubOpis(Microsoft.Office.Interop.Excel._Worksheet sh, DateTime dt, string title, 
+        private void DoSubOpis(Microsoft.Office.Interop.Excel._Worksheet sh, DateTime dt, string title,
             string cmdText, string doname, ref int row, ref int i0, ref decimal sm0)
         {
             sh.Cells[row, 1] = "АКБ \"ТКПБ\" (ОАО) г.Тамбов";
@@ -194,12 +194,19 @@ namespace qdocs
             int i = 0;
             decimal sm = 0;
             sh.Cells[row, 1] = "Номер док-та";
+            SetBorder(sh.Cells[row, 1]);
             sh.Cells[row, 2] = "ВО";
+            SetBorder(sh.Cells[row, 2]);
             sh.Cells[row, 3] = "БИК дебет";
+            SetBorder(sh.Cells[row, 3]);
             sh.Cells[row, 4] = "Счет дебет";
+            SetBorder(sh.Cells[row, 4]);
             sh.Cells[row, 5] = "БИК кредит";
+            SetBorder(sh.Cells[row, 5]);
             sh.Cells[row, 6] = "Счет кредит";
+            SetBorder(sh.Cells[row, 6]);
             sh.Cells[row, 7] = "Сумма";
+            SetBorder(sh.Cells[row, 7]);
             row++;
 
             using (OracleConnection cn = new OracleConnection(String.Format(
@@ -208,31 +215,47 @@ namespace qdocs
                 cn.Open();
                 var cmd = new OracleCommand(cmdText, cn);
                 cmd.Parameters.Add(":beg", OracleDbType.Date).Value = dt;
-                using(var rd = cmd.ExecuteReader())
+                using (var rd = cmd.ExecuteReader())
                 {
                     while (rd.Read())
                     {
                         sh.Cells[row, 1] = rd["num"];
+                        SetBorder(sh.Cells[row, 1]);
                         sh.Cells[row, 2] = rd["operationcode"];
+                        SetBorder(sh.Cells[row, 2]);
                         sh.Cells[row, 3] = rd["ticdebet"];
+                        SetBorder(sh.Cells[row, 3]);
                         sh.Cells[row, 4] = rd["debetaccount"];
+                        SetBorder(sh.Cells[row, 4]);
                         sh.Cells[row, 5] = rd["ticcredit"];
+                        SetBorder(sh.Cells[row, 5]);
                         sh.Cells[row, 6] = rd["creditaccount"];
+                        SetBorder(sh.Cells[row, 6]);
                         sh.Cells[row, 7] = rd["sm"];
+                        SetBorder(sh.Cells[row, 7]);
                         row++;
                         sh.Range[sh.Cells[row, 1], sh.Cells[row, 4]].Merge();
                         sh.Cells[row, 1] = rd["debetname"];
+                        SetBorder(sh.Cells[row, 1]);
+                        SetBorder(sh.Cells[row, 2]);
+                        SetBorder(sh.Cells[row, 3]);
+                        SetBorder(sh.Cells[row, 4]);
                         sh.Range[sh.Cells[row, 5], sh.Cells[row, 7]].Merge();
                         sh.Cells[row, 5] = rd["creditname"];
+                        SetBorder(sh.Cells[row, 5]);
+                        SetBorder(sh.Cells[row, 6]);
+                        SetBorder(sh.Cells[row, 7]);
                         sh.Cells[row, 8] = "=RC[-7]";
+                        SetBorder(sh.Cells[row, 8]);
                         sh.Cells[row, 9] = "=RC[-4]";
+                        SetBorder(sh.Cells[row, 9]);
                         sh.Cells[row, 1].EntireRow.WrapText = true;
                         row++;
-                        if (rd["cbudcode"].ToString() != "" || 
+                        if (rd["cbudcode"].ToString() != "" ||
                             rd["cokatocode"].ToString() != "" ||
-                            rd["cnalpurp"].ToString() != "" || 
+                            rd["cnalpurp"].ToString() != "" ||
                             rd["cnalperiod"].ToString() != "" ||
-                            rd["cnaldocnum"].ToString() != "" || 
+                            rd["cnaldocnum"].ToString() != "" ||
                             rd["cnaldocdate"].ToString() != "" ||
                             rd["cnaltype"].ToString() != "")
                         {
@@ -244,11 +267,26 @@ namespace qdocs
                                 rd["cnaldocnum"].ToString().PadRight(15) + " | " +
                                 rd["cnaldocdate"].ToString().PadRight(10) + " | " +
                                 rd["cnaltype"].ToString().PadRight(2);
+                            SetBorder(sh.Cells[row, 1]);
+                            SetBorder(sh.Cells[row, 2]);
+                            SetBorder(sh.Cells[row, 3]);
+                            SetBorder(sh.Cells[row, 4]);
+                            SetBorder(sh.Cells[row, 5]);
+                            SetBorder(sh.Cells[row, 6]);
+                            SetBorder(sh.Cells[row, 7]);
                             row++;
                         }
                         sh.Range[sh.Cells[row, 1], sh.Cells[row, 7]].Merge();
-                        sh.Cells[row, 1] = rd.GetValue(9) is DBNull ? "": rd.GetString(9);
+                        sh.Cells[row, 1] = rd.GetValue(9) is DBNull ? "" : rd.GetString(9);
+                        SetBorder(sh.Cells[row, 1]);
+                        SetBorder(sh.Cells[row, 2]);
+                        SetBorder(sh.Cells[row, 3]);
+                        SetBorder(sh.Cells[row, 4]);
+                        SetBorder(sh.Cells[row, 5]);
+                        SetBorder(sh.Cells[row, 6]);
+                        SetBorder(sh.Cells[row, 7]);
                         sh.Cells[row, 10] = "=RC[-9]";
+                        SetBorder(sh.Cells[row, 10]);
                         sh.Cells[row, 1].EntireRow.WrapText = true;
                         row++;
                         i++;
@@ -261,15 +299,24 @@ namespace qdocs
             sh.Cells[row, 1] = "Итого документов";
             sh.Cells[row, 4] = i;
             sh.Cells[row, 7] = sm;
-            var b = sh.Range[sh.Cells[row0, 1], sh.Cells[row - 1, 7]].Borders;
+            //var b = sh.Range[sh.Cells[row0, 1], sh.Cells[row - 1, 7]].Borders;
+            //b[XlBordersIndex.xlEdgeBottom].LineStyle = XlLineStyle.xlContinuous;
+            //b[XlBordersIndex.xlEdgeLeft].LineStyle = XlLineStyle.xlContinuous;
+            //b[XlBordersIndex.xlEdgeRight].LineStyle = XlLineStyle.xlContinuous;
+            //b[XlBordersIndex.xlEdgeTop].LineStyle = XlLineStyle.xlContinuous;
+            //b[XlBordersIndex.xlInsideHorizontal].LineStyle = XlLineStyle.xlContinuous;
+            //b[XlBordersIndex.xlInsideVertical].LineStyle = XlLineStyle.xlContinuous;
+            row++;
+            row++;
+        }
+
+        private void SetBorder(Range r)
+        {
+            Borders b = r.Borders;
             b[XlBordersIndex.xlEdgeBottom].LineStyle = XlLineStyle.xlContinuous;
             b[XlBordersIndex.xlEdgeLeft].LineStyle = XlLineStyle.xlContinuous;
             b[XlBordersIndex.xlEdgeRight].LineStyle = XlLineStyle.xlContinuous;
             b[XlBordersIndex.xlEdgeTop].LineStyle = XlLineStyle.xlContinuous;
-            b[XlBordersIndex.xlInsideHorizontal].LineStyle = XlLineStyle.xlContinuous;
-            b[XlBordersIndex.xlInsideVertical].LineStyle = XlLineStyle.xlContinuous;
-            row++;
-            row++;
         }
 
         private string GetDoName()
