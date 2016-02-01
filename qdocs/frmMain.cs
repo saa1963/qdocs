@@ -101,7 +101,7 @@ namespace qdocs
             string fname = ex.DoIt(this.dgv);
 
             Process prc = new Process();
-            prc.StartInfo.Arguments = fname;
+            prc.StartInfo.Arguments = "\"" + fname + "\"";
             prc.StartInfo.FileName = "excel.exe";
             prc.Start();
         }
