@@ -110,7 +110,7 @@ from
 where
     (a1.iaccotd = o.iusrbranch or a2.iaccotd = o.iusrbranch) and
     t.itrntype not in (5,41,42,43,44,50,53,9,10,12,13,-3) and
-    t.cpay_acc not like '202%' and t.crec_acc not like '202%' and 
+    t.cpay_acc not like '202%' and t.crec_acc not like '20202%' and 
     t.cpay_acc not like '912%' and t.crec_acc not like '912%' and 
     t.cpay_acc not like '423%' and t.crec_acc not like '423%' and
     not (t.cpay_acc like '70%' and t.crec_acc like '6%') and
@@ -127,7 +127,8 @@ where
         (t.crec_acc like '61301810_007%') or
         (t.cpay_acc = '61214810600700000001') or
         (t.cpay_acc = '47423810900000000012' and t.crec_acc like '70706%') or
-        (t.cpay_acc like '40%' and t.crec_acc = '70601810900001210218')
+        (t.cpay_acc like '40%' and t.crec_acc = '70601810900001210218') or
+		(t.cpay_acc = '30102810100000000001' and t.crec_acc = '20209810600700000002')
     ) and
     A1.CACCCUR = 'RUR' and A2.CACCCUR = 'RUR')
 minus
