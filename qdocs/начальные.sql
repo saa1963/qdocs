@@ -42,6 +42,7 @@ where
     not(t.cpay_acc like '40817%' and t.crec_acc like '70601%') and
 	not(t.cpay_acc like '60601%' and t.crec_acc like '61209%') and
 	not(t.cpay_acc like '61209%' and t.crec_acc like '60401%') and
+	not(t.cpay_acc like '708%' and t.crec_acc like '707%') and
     not(a1.iaccotd <> o.iusrbranch and t.crec_acc like '45%') and
     not(t.cpay_acc like '60312%' and substr(t.crec_acc, 1, 5) in ('40502','40602','40702','40703','40802', '40817'))
 )
