@@ -30,7 +30,8 @@ where
     t.cpay_acc not like '912%' and t.crec_acc not like '912%' and 
     t.cpay_acc not like '423%' and t.crec_acc not like '423%' and
     not (t.cpay_acc like '70%' and t.crec_acc like '6%') and
-    not (t.cpay_acc like '70801%' and t.crec_acc like '70706%') and
+    not (t.cpay_acc like '70801%' and t.crec_acc like '707%') and
+	not (t.cpay_acc like '707%' and t.crec_acc like '708%') and
     not (t.cpay_acc like '603%' and t.crec_acc like '70606%') and
 	not (t.cpay_acc like '707%' and t.crec_acc like '706%') and
 	not (t.cpay_acc like '10601%' and t.crec_acc like '10601%') and
