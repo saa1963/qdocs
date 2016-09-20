@@ -28,6 +28,7 @@ where
     t.itrntype not in (5,41,42,43,44,50,53,9,10,12,13,-3) and
     t.cpay_acc not like '202%' and t.crec_acc not like '202%' and 
     t.cpay_acc not like '912%' and t.crec_acc not like '912%' and
+	t.cpay_acc not like '42309%' and t.crec_acc not like '42309%' and
     t.cpay_acc not like '60305810%' and  
     T.DTRNTRAN between :beg and :beg + 1 and
     ((A1.IACCOTD = o.iusrbranch and t.cpay_acc like '423%') or (a2.iaccotd = o.iusrbranch and t.crec_acc like '423%') or 

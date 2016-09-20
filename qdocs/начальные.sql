@@ -78,6 +78,7 @@ where
     t.itrntype not in (5,41,42,43,44,50,53,9,10,12,13,-3) and
     t.cpay_acc not like '202%' and t.crec_acc not like '202%' and 
     t.cpay_acc not like '912%' and t.crec_acc not like '912%' and
+	t.cpay_acc not like '42309%' and t.crec_acc not like '42309%' and
     t.cpay_acc not like '60305810%' and  
     T.DTRNTRAN between :beg and :beg + 1 and
     ((A1.IACCOTD = o.iusrbranch and t.cpay_acc like '423%') or (a2.iaccotd = o.iusrbranch and t.crec_acc like '423%') or 
@@ -115,7 +116,9 @@ where
     t.itrntype not in (5,41,42,43,44,50,53,9,10,12,13,-3) and
     t.cpay_acc not like '202%' and t.crec_acc not like '20202%' and 
     t.cpay_acc not like '912%' and t.crec_acc not like '912%' and 
-    t.cpay_acc not like '423%' and t.crec_acc not like '423%' and
+    -- t.cpay_acc not like '423%' and t.crec_acc not like '423%' and
+	t.cpay_acc not in ('42301','42302','42303','42304','42305','42306','42307','42308') and
+	t.crec_acc not in ('42301','42302','42303','42304','42305','42306','42307','42308') and
     not (t.cpay_acc like '70%' and t.crec_acc like '6%') and
     not (t.cpay_acc like '70801%' and t.crec_acc like '707%') and
 	not (t.cpay_acc like '707%' and t.crec_acc like '708%') and
@@ -127,14 +130,16 @@ where
         ((A1.IACCOTD = o.iusrbranch and t.cpay_acc like '70%') or (a2.iaccotd = o.iusrbranch and t.crec_acc like '70%')) or 
         (t.cpay_acc like '474%' and t.crec_acc like '474%') or
         (t.cpay_acc like '70606%' and t.crec_acc like '47411%') or
-        (t.crec_acc like '61214810600700000001') or
+        (t.crec_acc = '61214810600700000001') or
         (t.crec_acc like '61301810_007%') or
         (t.cpay_acc = '61214810600700000001') or
         (t.cpay_acc = '47423810900000000012' and t.crec_acc like '70706%') or
-        (t.cpay_acc like '40%' and t.crec_acc = '70601810900001210218') or
-		(t.cpay_acc = '30102810100000000001' and t.crec_acc = '20209810600700000002')
+        (t.cpay_acc like '40%' and t.crec_acc = '70601810900001210218') or 
+		(t.cpay_acc = '30102810100000000001' and t.crec_acc = '20209810600700000002') or 
+		(t.cpay_acc = '40817810400700005514' and t.crec_acc = '70601810800702730401')
     ) and
-    A1.CACCCUR = 'RUR' and A2.CACCCUR = 'RUR')
+    A1.CACCCUR = 'RUR' and A2.CACCCUR = 'RUR'
+)
 minus
 (select
     T.ITRNDOCNUM num,
