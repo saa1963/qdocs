@@ -29,8 +29,8 @@ where
     t.cpay_acc not like '202%' and t.crec_acc not like '20202%' and 
     t.cpay_acc not like '912%' and t.crec_acc not like '912%' and 
     -- t.cpay_acc not like '423%' and t.crec_acc not like '423%' and
-	t.cpay_acc not in ('42301','42302','42303','42304','42305','42306','42307','42308') and
-	t.crec_acc not in ('42301','42302','42303','42304','42305','42306','42307','42308') and
+	substr(t.cpay_acc, 1, 5) not in ('42301','42302','42303','42304','42305','42306','42307','42308') and
+	substr(t.crec_acc, 1, 5) not in ('42301','42302','42303','42304','42305','42306','42307','42308') and
     not (t.cpay_acc like '70%' and t.crec_acc like '6%') and
     not (t.cpay_acc like '70801%' and t.crec_acc like '707%') and
 	not (t.cpay_acc like '707%' and t.crec_acc like '708%') and

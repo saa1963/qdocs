@@ -29,7 +29,7 @@
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
     <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
-    <ApplicationRevision>87</ApplicationRevision>
+    <ApplicationRevision>88</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -79,10 +79,10 @@
     <SignManifests>true</SignManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>23219E8D16E8B72F4EB6F401F1EA5F0B78925CEB</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>40DCBF27B6848E2211D6036E2C31500CAC8C0D56</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestKeyFile>qdocs_1_TemporaryKey.pfx</ManifestKeyFile>
+    <ManifestKeyFile>qdocs_2_TemporaryKey.pfx</ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
     <GenerateManifests>true</GenerateManifests>
@@ -193,6 +193,7 @@
     <Compile Include="RowCondition.cs" />
     <Compile Include="toExcel.cs" />
     <None Include="qdocs_1_TemporaryKey.pfx" />
+    <None Include="qdocs_2_TemporaryKey.pfx" />
     <None Include="qdocs_TemporaryKey.pfx" />
     <Content Include="spravka2.doc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
