@@ -42,6 +42,8 @@ where
     not(t.cpay_acc like '40817%' and t.crec_acc like '70601%') and
 	not(t.cpay_acc like '60601%' and t.crec_acc like '61209%') and
 	not(t.cpay_acc like '61209%' and t.crec_acc like '60401%') and
+	not(t.cpay_acc like '603%' and t.crec_acc like '706%') and
+	not(t.cpay_acc like '60401%' and t.crec_acc like '60415%') and
 	not(t.cpay_acc = '40702810200000000773' and t.crec_acc = '47422810400701000773') and
 	not(t.cpay_acc like '708%' and t.crec_acc like '707%') and
     not(a1.iaccotd <> o.iusrbranch and t.crec_acc like '45%') and
