@@ -40,8 +40,8 @@ where
     not(t.cpay_acc like '603%' and t.crec_acc like '4%') and
     not(t.cpay_acc like '47425%' and t.crec_acc like '47425%') and
     not(t.cpay_acc like '40817%' and t.crec_acc like '70601%') and
-	not(t.cpay_acc like '60601%' and t.crec_acc like '61209%') and
-	not(t.cpay_acc like '61209%' and t.crec_acc like '60401%') and
+	not(t.cpay_acc like '60%' and t.crec_acc like '61209%') and
+	not(t.cpay_acc like '61209%' and t.crec_acc like '60%') and
 	not(t.cpay_acc like '603%' and t.crec_acc like '706%') and
 	not(t.cpay_acc like '60401%' and t.crec_acc like '60415%') and
 	not(t.cpay_acc = '40702810200000000773' and t.crec_acc = '47422810400701000773') and
@@ -81,10 +81,11 @@ where
     t.cpay_acc not like '202%' and t.crec_acc not like '202%' and 
     t.cpay_acc not like '912%' and t.crec_acc not like '912%' and
 	t.cpay_acc not like '42309%' and t.crec_acc not like '42309%' and
+	t.cpay_acc not like '42609%' and t.crec_acc not like '42609%' and
     t.cpay_acc not like '60305810%' and  
     T.DTRNTRAN between :beg and :beg + 1 and
     ((A1.IACCOTD = o.iusrbranch and t.cpay_acc like '423%') or (a2.iaccotd = o.iusrbranch and t.crec_acc like '423%') or 
-    (A1.IACCOTD = o.iusrbranch and t.cpay_acc like '42603%') or (a2.iaccotd = o.iusrbranch and t.crec_acc like '42603%')) and
+    (A1.IACCOTD = o.iusrbranch and t.cpay_acc like '426%') or (a2.iaccotd = o.iusrbranch and t.crec_acc like '426%')) and
     (not (a1.iaccotd <> o.iusrbranch and t.crec_acc like '423__810_0070%') or (t.cpay_acc = '47422810700000000064')) and
     substr(t.cpay_acc, 6, 3) = '810' and substr(t.crec_acc, 6, 3) = '810'
 )
@@ -123,9 +124,8 @@ where
 	substr(t.crec_acc, 1, 5) not in ('42301','42302','42303','42304','42305','42306','42307','42308') and
     not (t.cpay_acc like '70%' and t.crec_acc like '6%') and
     not (t.cpay_acc like '70801%' and t.crec_acc like '707%') and
-	not (t.cpay_acc like '707%' and t.crec_acc like '708%') and
+	not (t.cpay_acc like '707%' and t.crec_acc like '70%') and
     not (t.cpay_acc like '603%' and t.crec_acc like '70606%') and
-	not (t.cpay_acc like '707%' and t.crec_acc like '706%') and
 	not (t.cpay_acc like '10601%' and t.crec_acc like '10601%') and
 	not (t.cpay_acc like '30102%' and t.crec_acc like '20209%') and
     T.DTRNTRAN between :beg and :beg + 1 and

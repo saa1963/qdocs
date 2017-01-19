@@ -29,10 +29,11 @@ where
     t.cpay_acc not like '202%' and t.crec_acc not like '202%' and 
     t.cpay_acc not like '912%' and t.crec_acc not like '912%' and
 	t.cpay_acc not like '42309%' and t.crec_acc not like '42309%' and
+	t.cpay_acc not like '42609%' and t.crec_acc not like '42609%' and
     t.cpay_acc not like '60305810%' and  
     T.DTRNTRAN between :beg and :beg + 1 and
     ((A1.IACCOTD = o.iusrbranch and t.cpay_acc like '423%') or (a2.iaccotd = o.iusrbranch and t.crec_acc like '423%') or 
-    (A1.IACCOTD = o.iusrbranch and t.cpay_acc like '42603%') or (a2.iaccotd = o.iusrbranch and t.crec_acc like '42603%')) and
+    (A1.IACCOTD = o.iusrbranch and t.cpay_acc like '426%') or (a2.iaccotd = o.iusrbranch and t.crec_acc like '426%')) and
     (not (a1.iaccotd <> o.iusrbranch and t.crec_acc like '423__810_0070%') or (t.cpay_acc = '47422810700000000064')) and
     substr(t.cpay_acc, 6, 3) = '810' and substr(t.crec_acc, 6, 3) = '810'
 )
