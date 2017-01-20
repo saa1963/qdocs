@@ -36,6 +36,7 @@ where
 	not (t.cpay_acc like '707%' and t.crec_acc like '708%') and
     not (t.cpay_acc like '603%' and t.crec_acc like '70606%') and
 	not (t.cpay_acc like '707%' and t.crec_acc like '706%') and
+	not (t.cpay_acc like '706%' and t.crec_acc like '707%') and
 	not (t.cpay_acc like '10601%' and t.crec_acc like '10601%') and
 	not (t.cpay_acc like '30102%' and t.crec_acc like '20209%') and
     T.DTRNTRAN between :beg and :beg + 1 and
