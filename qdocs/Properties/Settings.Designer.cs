@@ -73,7 +73,7 @@ namespace qdocs.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(DESCRIPTION = (ADDRESS = (PROTOCOL = TCP)(HOST = 192.168.20.217)(POR" +
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(DESCRIPTION = (ADDRESS = (PROTOCOL = TCP)(HOST = 192.168.20.220)(POR" +
             "T = 1522))(CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = ODBN)));User ID={0" +
             "};Password={1}")]
         public string ConnectionString {
