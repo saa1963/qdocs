@@ -66,7 +66,7 @@ namespace qdocs
                 Query q = new Query(dgvConditions, tbDt1.Value, tbDt2.Value, tbMinusPrixod.Checked);
                 bs.DataSource = null;
                 using (OracleConnection cn = new OracleConnection(String.Format(
-                    Settings.Default.ConnectionString, Settings.Default.User, Settings.Default.Password)))
+                    Settings.Default.ConnectionString1, Settings.Default.User, Settings.Default.Password)))
                 {
                     cn.Open();
                     OracleDataAdapter da = new OracleDataAdapter(q.QueryString, cn);
@@ -134,7 +134,7 @@ namespace qdocs
             f.Dt2 = DateTime.Today;
             if (f.ShowDialog() != System.Windows.Forms.DialogResult.OK) return;
             using (OracleConnection cn = new OracleConnection(String.Format(
-                Settings.Default.ConnectionString, Settings.Default.User, Settings.Default.Password)))
+                Settings.Default.ConnectionString1, Settings.Default.User, Settings.Default.Password)))
             {
                 cn.Open();
                 var cmd = new OracleCommand(@"select

@@ -210,7 +210,7 @@ namespace qdocs
             row++;
 
             using (OracleConnection cn = new OracleConnection(String.Format(
-                Settings.Default.ConnectionString, Settings.Default.User, Settings.Default.Password)))
+                Settings.Default.ConnectionString1, Settings.Default.User, Settings.Default.Password)))
             {
                 cn.Open();
                 var cmd = new OracleCommand(cmdText, cn);
@@ -322,7 +322,7 @@ namespace qdocs
         private string GetDoName()
         {
             using (OracleConnection cn = new OracleConnection(String.Format(
-                Settings.Default.ConnectionString, Settings.Default.User, Settings.Default.Password)))
+                Settings.Default.ConnectionString1, Settings.Default.User, Settings.Default.Password)))
             {
                 cn.Open();
                 var cmd = new OracleCommand(@"
@@ -370,7 +370,7 @@ select o.cotdname from otd o, otdel o1 where O.IOTDNUM = o1.iusrbranch
             decimal sm = 0;
 
             using (OracleConnection cn = new OracleConnection(String.Format(
-                Settings.Default.ConnectionString, Settings.Default.User, Settings.Default.Password)))
+                Settings.Default.ConnectionString1, Settings.Default.User, Settings.Default.Password)))
             {
                 cn.Open();
                 var cmd = new OracleCommand(cmdText, cn);
