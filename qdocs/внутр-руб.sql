@@ -39,6 +39,7 @@ where
 	not (t.cpay_acc like '706%' and t.crec_acc like '707%') and
 	not (t.cpay_acc like '10601%' and t.crec_acc like '10601%') and
 	not (t.cpay_acc like '30102%' and t.crec_acc like '20209%') and
+	not (t.cpay_acc like '47423%' and t.crec_acc like '47416%') and
     T.DTRNTRAN between :beg and :beg + 1 and
     (
         ((A1.IACCOTD = o.iusrbranch and t.cpay_acc like '70%') or (a2.iaccotd = o.iusrbranch and t.crec_acc like '70%')) or 
