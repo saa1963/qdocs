@@ -31,16 +31,18 @@ where
     -- t.cpay_acc not like '423%' and t.crec_acc not like '423%' and
 	substr(t.cpay_acc, 1, 5) not in ('42301','42302','42303','42304','42305','42306','42307','42308') and
 	substr(t.crec_acc, 1, 5) not in ('42301','42302','42303','42304','42305','42306','42307','42308') and
-    not (t.cpay_acc like '70%' and t.crec_acc like '6%') and
+    (not (t.cpay_acc like '70%' and t.crec_acc like '6%') or (t.cpay_acc = '70606810900704730401' and t.crec_acc like '60324810700000000123')) and
     not (t.cpay_acc like '70801%' and t.crec_acc like '707%') and
 	not (t.cpay_acc like '707%' and t.crec_acc like '708%') and
-    not (t.cpay_acc like '603%' and t.crec_acc like '70606%') and
+    (not (t.cpay_acc like '603%' and t.crec_acc like '70606%') or (t.cpay_acc = '60324810700000000123' and t.crec_acc like '70606810900704730401')) and
 	not (t.cpay_acc like '707%' and t.crec_acc like '706%') and
 	not (t.cpay_acc like '706%' and t.crec_acc like '707%') and
 	not (t.cpay_acc like '10601%' and t.crec_acc like '10601%') and
 	not (t.cpay_acc like '30102%' and t.crec_acc like '20209%') and
 	not (t.cpay_acc like '47423%' and t.crec_acc like '47416%') and
 	not (t.cpay_acc like '40101%' and t.crec_acc like '47416%') and
+	not (t.cpay_acc like '47416%' and t.crec_acc like '47423%') and
+	not (t.cpay_acc like '60335%' and t.crec_acc like '70601%') and
     T.DTRNTRAN between :beg and :beg + 1 and
     (
         ((A1.IACCOTD = o.iusrbranch and t.cpay_acc like '70%') or (a2.iaccotd = o.iusrbranch and t.crec_acc like '70%')) or 
