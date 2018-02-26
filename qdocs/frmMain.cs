@@ -172,6 +172,11 @@ order by 5 desc", cn);
             }
             new toExcel().DoContrAgents(lst);
         }
+
+        private void toolStripDropDownButton1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 
