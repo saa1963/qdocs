@@ -34,6 +34,7 @@ where
       not (a1.iaccotd <> o.iusrbranch and substr(t.crec_acc, 1, 5) in ('40502','40602','40702','40703','40802', '40817', '42301')) or 
       (t.cpay_acc = '30233810600000000001' and t.crec_acc like '40817%')
     ) and
+	not (t.ctrnidopen = 'IP_GATE' and t.itrnsop <> 104) and
     not(t.cpay_acc like '60310%' and t.crec_acc like '6%') and
     not(t.cpay_acc like '70%' and t.crec_acc like '6%') and
     not(t.cpay_acc like '47423%' and t.crec_acc like '6%') and
