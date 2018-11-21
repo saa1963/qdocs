@@ -51,6 +51,7 @@ where
 	not(t.cpay_acc like '707%' and t.crec_acc like '708%') and
 	not(t.cpay_acc like '603%' and t.crec_acc like '603%') and
 	not(t.cpay_acc like '614%' and t.crec_acc like '603%') and
+	not(t.cpay_acc like '61008%' and t.crec_acc like '603%') and
     not(a1.iaccotd <> o.iusrbranch and t.crec_acc like '45%') and
 	not(t.itrntype = 2 and a1.iaccotd <> o.iusrbranch) and 
     not(t.cpay_acc like '60312%' and substr(t.crec_acc, 1, 5) in ('40502','40602','40702','40703','40802', '40817'))
@@ -142,6 +143,7 @@ where
 	not (t.cpay_acc like '60305%' and t.crec_acc like '70601%') and
 	not (t.cpay_acc like '40702%' and t.crec_acc like '61301%') and
 	not (t.cpay_acc like '61403%' and t.crec_acc like '70606%') and
+	not (t.cpay_acc like '61008%' and t.crec_acc like '70606%') and
     T.DTRNTRAN between :beg and :beg + 1 and
     (
         ((A1.IACCOTD = o.iusrbranch and t.cpay_acc like '70%') or (a2.iaccotd = o.iusrbranch and t.crec_acc like '70%')) or 
