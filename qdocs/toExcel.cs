@@ -23,6 +23,8 @@ namespace qdocs
             File.ReadAllText(Path.Combine(System.AppDomain.CurrentDomain.BaseDirectory, "начальные.sql"), Encoding.GetEncoding(1251));
         private string opis_vneb =
             File.ReadAllText(Path.Combine(System.AppDomain.CurrentDomain.BaseDirectory, "внебал.sql"), Encoding.GetEncoding(1251));
+        private string opis_card =
+            File.ReadAllText(Path.Combine(System.AppDomain.CurrentDomain.BaseDirectory, "карты.sql"), Encoding.GetEncoding(1251));
         public string DoIt(DataGridView dgv)
         {
             System.Threading.Thread.CurrentThread.CurrentCulture = 
@@ -165,6 +167,7 @@ namespace qdocs
             DoSubOpis(wsh, dt, "Внутрибанковские документы валютные", opis_vnutr_val, doname, ref row, ref i0, ref sm0);
             DoSubOpis(wsh, dt, "Начальные документы рублевые", opis_nach_rub, doname, ref row, ref i0, ref sm0);
             DoSubOpis(wsh, dt, "Внебалансовые документы", opis_vneb, doname, ref row, ref i0, ref sm0);
+            DoSubOpis(wsh, dt, "Банковские карты", opis_card, doname, ref row, ref i0, ref sm0);
 
             wsh.Cells[row, 1] = "Всего документов";
             wsh.Cells[row, 4] = i0;
@@ -353,6 +356,7 @@ select o.cotdname from otd o, otdel o1 where O.IOTDNUM = o1.iusrbranch
             DoSubLenta(wsh, dt, opis_vnutr_val, ref row, ref i0, ref sm0);
             DoSubLenta(wsh, dt, opis_nach_rub, ref row, ref i0, ref sm0);
             DoSubLenta(wsh, dt, opis_vneb, ref row, ref i0, ref sm0);
+            DoSubLenta(wsh, dt, opis_card, ref row, ref i0, ref sm0);
 
             wsh.Cells[row, 1] = sm0;
 
