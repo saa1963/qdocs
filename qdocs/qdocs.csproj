@@ -29,7 +29,7 @@
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
     <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
-    <ApplicationRevision>117</ApplicationRevision>
+    <ApplicationRevision>118</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -79,10 +79,10 @@
     <SignManifests>true</SignManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>30EF0E49E924D685A24E0A367579C0F7FE38E4B0</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>EAB0C315BCCAAB4C3BF954D0B73E7321DA085C54</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestKeyFile>qdocs_3_TemporaryKey.pfx</ManifestKeyFile>
+    <ManifestKeyFile>qdocs_4_TemporaryKey.pfx</ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
     <GenerateManifests>true</GenerateManifests>
@@ -195,6 +195,7 @@
     <None Include="qdocs_1_TemporaryKey.pfx" />
     <None Include="qdocs_2_TemporaryKey.pfx" />
     <None Include="qdocs_3_TemporaryKey.pfx" />
+    <None Include="qdocs_4_TemporaryKey.pfx" />
     <None Include="qdocs_TemporaryKey.pfx" />
     <Content Include="spravka2.doc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

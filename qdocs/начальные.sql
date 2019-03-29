@@ -47,6 +47,7 @@ where
 	not(t.cpay_acc like '60401%' and t.crec_acc like '60415%') and
 	not(t.cpay_acc = '40702810200000000773' and t.crec_acc = '47422810400701000773') and
 	not(t.cpay_acc like '70%' and t.crec_acc like '707%') and
+	not(t.cpay_acc like '603%' and t.crec_acc like '707%') and
 	not(t.cpay_acc like '707%' and t.crec_acc like '70%') and
 	not(t.cpay_acc like '603%' and t.crec_acc like '603%') and
 	not(t.cpay_acc like '614%' and t.crec_acc like '603%') and
