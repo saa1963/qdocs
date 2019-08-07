@@ -29,7 +29,7 @@ where
     t.cpay_acc not like '202%' and t.crec_acc not like '202%' and 
     t.cpay_acc not like '912%' and t.crec_acc not like '912%' and 
     T.DTRNTRAN between :beg and :beg + 1 and
-    not(t.cpay_acc like '40817%' and t.crec_acc like '30233%') and 
+    not(t.cpay_acc like '40817%' and ((t.crec_acc like '30233%') or (t.crec_acc like '47422%'))) and 
     (
       not (a1.iaccotd <> o.iusrbranch and substr(t.crec_acc, 1, 5) in ('40502','40602','40702','40703','40802', '40817', '42301')) or 
       (t.cpay_acc = '30233810600000000001' and t.crec_acc like '40817%')
