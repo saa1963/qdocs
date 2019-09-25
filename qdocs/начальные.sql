@@ -261,7 +261,16 @@ where
     (a1.iaccotd = o.iusrbranch or a2.iaccotd = o.iusrbranch) and
     t.itrntype not in (5,41,42,43,44,50,53,9,10,12,13,-3) and
     T.DTRNTRAN between :beg and :beg + 1 and
-    A1.IACCOTD = o.iusrbranch and t.cpay_acc like '40817%' and t.crec_acc like '30233%' and 
+	((
+    A1.IACCOTD = o.iusrbranch and 
+	t.cpay_acc like '40817%' and 
+	t.crec_acc like '30233%'
+	) or 
+	(
+	A2.IACCOTD = o.iusrbranch and 
+	t.cpay_acc like '30233%' and
+	t.crec_acc like '40817%'
+	)) and 
     substr(t.cpay_acc, 6, 3) = '810' and substr(t.crec_acc, 6, 3) = '810'
 )
 order by srt, num
