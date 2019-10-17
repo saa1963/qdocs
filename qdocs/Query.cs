@@ -28,7 +28,8 @@ namespace qdocs
                 a1.CACCIDEDIT operator1,
                 a2.CACCIDEDIT operator2,
                 t.cpay_inn inndebet, 
-                t.crec_inn inncredit
+                t.crec_inn inncredit,
+                t.ctrnbnamea bank
             from 
                 XXI.v_pdoc_mf t left join XXI.acc a1 on t.cpay_acc = a1.caccacc left join XXI.acc a2 on t.crec_acc = a2.caccacc, otdel o  
             where

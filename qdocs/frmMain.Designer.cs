@@ -29,24 +29,11 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.dgv = new System.Windows.Forms.DataGridView();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Num = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.VidOp = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.da = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cr = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nd = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.note = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bs = new System.Windows.Forms.BindingSource(this.components);
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.btnRun = new System.Windows.Forms.ToolStripButton();
@@ -68,6 +55,20 @@
             this.p2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.p3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.p4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Num = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.VidOp = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.da = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cr = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nd = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.note = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -122,7 +123,8 @@
             this.cr,
             this.nd,
             this.nc,
-            this.note});
+            this.note,
+            this.Column7});
             this.dgv.DataSource = this.bs;
             this.dgv.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv.Location = new System.Drawing.Point(0, 39);
@@ -130,109 +132,6 @@
             this.dgv.ReadOnly = true;
             this.dgv.Size = new System.Drawing.Size(677, 251);
             this.dgv.TabIndex = 1;
-            // 
-            // Column4
-            // 
-            this.Column4.DataPropertyName = "accountingdate";
-            this.Column4.HeaderText = "Дата";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            // 
-            // Num
-            // 
-            this.Num.DataPropertyName = "num";
-            this.Num.HeaderText = "№ док.";
-            this.Num.Name = "Num";
-            this.Num.ReadOnly = true;
-            this.Num.Width = 50;
-            // 
-            // VidOp
-            // 
-            this.VidOp.DataPropertyName = "operationcode";
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.VidOp.DefaultCellStyle = dataGridViewCellStyle1;
-            this.VidOp.HeaderText = "Вид оп";
-            this.VidOp.Name = "VidOp";
-            this.VidOp.ReadOnly = true;
-            this.VidOp.Width = 50;
-            // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "sm";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.Column1.DefaultCellStyle = dataGridViewCellStyle2;
-            this.Column1.HeaderText = "Сумма";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Width = 90;
-            // 
-            // Column5
-            // 
-            this.Column5.DataPropertyName = "inndebet";
-            this.Column5.HeaderText = "ИНН деб.";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.DataPropertyName = "ticdebet";
-            this.Column2.HeaderText = "БИК деб";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // da
-            // 
-            this.da.DataPropertyName = "debetaccount";
-            this.da.HeaderText = "Дебет";
-            this.da.Name = "da";
-            this.da.ReadOnly = true;
-            this.da.Width = 130;
-            // 
-            // Column6
-            // 
-            this.Column6.DataPropertyName = "inncredit";
-            this.Column6.HeaderText = "ИНН кред.";
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.DataPropertyName = "ticcredit";
-            this.Column3.HeaderText = "БИК кред";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
-            // cr
-            // 
-            this.cr.DataPropertyName = "creditaccount";
-            this.cr.HeaderText = "Кредит";
-            this.cr.Name = "cr";
-            this.cr.ReadOnly = true;
-            this.cr.Width = 130;
-            // 
-            // nd
-            // 
-            this.nd.DataPropertyName = "namedebet";
-            this.nd.HeaderText = "Плательщик";
-            this.nd.Name = "nd";
-            this.nd.ReadOnly = true;
-            this.nd.Width = 200;
-            // 
-            // nc
-            // 
-            this.nc.DataPropertyName = "namecredit";
-            this.nc.HeaderText = "Получатель";
-            this.nc.Name = "nc";
-            this.nc.ReadOnly = true;
-            this.nc.Width = 200;
-            // 
-            // note
-            // 
-            this.note.DataPropertyName = "note";
-            this.note.HeaderText = "Назн.платежа";
-            this.note.Name = "note";
-            this.note.ReadOnly = true;
-            this.note.Width = 300;
             // 
             // toolStrip1
             // 
@@ -426,6 +325,116 @@
             this.p4.HeaderText = "Значение 4";
             this.p4.Name = "p4";
             // 
+            // Column4
+            // 
+            this.Column4.DataPropertyName = "accountingdate";
+            this.Column4.HeaderText = "Дата";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
+            // Num
+            // 
+            this.Num.DataPropertyName = "num";
+            this.Num.HeaderText = "№ док.";
+            this.Num.Name = "Num";
+            this.Num.ReadOnly = true;
+            this.Num.Width = 50;
+            // 
+            // VidOp
+            // 
+            this.VidOp.DataPropertyName = "operationcode";
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.VidOp.DefaultCellStyle = dataGridViewCellStyle1;
+            this.VidOp.HeaderText = "Вид оп";
+            this.VidOp.Name = "VidOp";
+            this.VidOp.ReadOnly = true;
+            this.VidOp.Width = 50;
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "sm";
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.Column1.DefaultCellStyle = dataGridViewCellStyle2;
+            this.Column1.HeaderText = "Сумма";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 90;
+            // 
+            // Column5
+            // 
+            this.Column5.DataPropertyName = "inndebet";
+            this.Column5.HeaderText = "ИНН деб.";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "ticdebet";
+            this.Column2.HeaderText = "БИК деб";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // da
+            // 
+            this.da.DataPropertyName = "debetaccount";
+            this.da.HeaderText = "Дебет";
+            this.da.Name = "da";
+            this.da.ReadOnly = true;
+            this.da.Width = 130;
+            // 
+            // Column6
+            // 
+            this.Column6.DataPropertyName = "inncredit";
+            this.Column6.HeaderText = "ИНН кред.";
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "ticcredit";
+            this.Column3.HeaderText = "БИК кред";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // cr
+            // 
+            this.cr.DataPropertyName = "creditaccount";
+            this.cr.HeaderText = "Кредит";
+            this.cr.Name = "cr";
+            this.cr.ReadOnly = true;
+            this.cr.Width = 130;
+            // 
+            // nd
+            // 
+            this.nd.DataPropertyName = "namedebet";
+            this.nd.HeaderText = "Плательщик";
+            this.nd.Name = "nd";
+            this.nd.ReadOnly = true;
+            this.nd.Width = 200;
+            // 
+            // nc
+            // 
+            this.nc.DataPropertyName = "namecredit";
+            this.nc.HeaderText = "Получатель";
+            this.nc.Name = "nc";
+            this.nc.ReadOnly = true;
+            this.nc.Width = 200;
+            // 
+            // note
+            // 
+            this.note.DataPropertyName = "note";
+            this.note.HeaderText = "Назн.платежа";
+            this.note.Name = "note";
+            this.note.ReadOnly = true;
+            this.note.Width = 300;
+            // 
+            // Column7
+            // 
+            this.Column7.DataPropertyName = "bank";
+            this.Column7.HeaderText = "Банк";
+            this.Column7.Name = "Column7";
+            this.Column7.ReadOnly = true;
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -494,9 +503,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn nd;
         private System.Windows.Forms.DataGridViewTextBoxColumn nc;
         private System.Windows.Forms.DataGridViewTextBoxColumn note;
-
-
-
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
     }
 }
 
