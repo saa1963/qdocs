@@ -31,7 +31,7 @@
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
     <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
-    <ApplicationRevision>138</ApplicationRevision>
+    <ApplicationRevision>137</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -78,13 +78,13 @@
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <PropertyGroup>
-    <SignManifests>false</SignManifests>
+    <SignManifests>true</SignManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>0E5D0AADD6EF4EB6C871D36BBB6671799994CF95</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>EAB0C315BCCAAB4C3BF954D0B73E7321DA085C54</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestKeyFile>qdocs_5_TemporaryKey.pfx</ManifestKeyFile>
+    <ManifestKeyFile>qdocs_4_TemporaryKey.pfx</ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
     <GenerateManifests>true</GenerateManifests>
@@ -197,7 +197,6 @@
     <None Include="qdocs_2_TemporaryKey.pfx" />
     <None Include="qdocs_3_TemporaryKey.pfx" />
     <None Include="qdocs_4_TemporaryKey.pfx" />
-    <None Include="qdocs_5_TemporaryKey.pfx" />
     <None Include="qdocs_TemporaryKey.pfx" />
     <Content Include="spravka2.doc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
